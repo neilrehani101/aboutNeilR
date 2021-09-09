@@ -4,6 +4,16 @@
 <head>
     <title>About Neil R.</title>
 	<link rel="stylesheet" href="styles.css"></link>
+	<script>
+	function go() {
+	var tag = document. createElement("p"); // <p></p>
+	var text = document. createTextNode("Thank You!");
+	tag. appendChild(text); // <p>TEST TEXT</p>
+	var element = document.getElementsByTagName("footer")[0];
+	element. appendChild(tag); // <body> <p>TEST TEXT</p> </body>
+	setTimeout(function(){ element.removeChild(tag) }, 3000);
+}
+	</script>
 </head>
 
 <body>
@@ -12,12 +22,12 @@
         <h2>&nbsp;</h2>
     </header>
     <section>
-        <h2>Who am I?</h2>
-        <p>I am Neil Rehani, who loves coding, reading, French, art, and more!</p>
+        <h2>This is my first website!</h2>
+        <p></p>
     </section>
     <article id="interests">
         <h2>My Interests</h2>
-        <p>I love computers! I just love them. They are so interesting! Auxilliary, Primary Memories. HTML, CSS, JS, Kotlin, Java, C# and more!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </article>
     <article>
         <h2>My hobbies</h2>
@@ -45,9 +55,13 @@
         <p><span class="bold">Email</span> - rehanineil1409@gmail.com</h3>
         <p><span class="bold">Phone Number (India)</span> - 89208-07783</h3>
     </article>
+	<footer>
+		<h2>Reviews</h2>
+		<button id="review-btn" onclick="go()">Go Ahead and Give "AMAZING!"</button>
+		<button id="review-btn1" onclick="go()">Go Ahead and Give "SATISFYING"</button>
+		<button id="review-btn2" onclick="go()">Go Ahead and Give "WORST"</button>
+	</footer>
 </body>
 
 </html>
-<footer>
-    <h2>Thank you for visiting my site!</h2>
-</footer>
+
