@@ -5,6 +5,7 @@ body {
 	max-width: 90%;
 	margin: auto;
 	font-family: 'Poppins', sans-serif;
+	cursor: url(https://cdn.custom-cursor.com/db/cursor/32/Blue_cursor.png) , default!important;
 }
 h1 {
 	float: left;
@@ -73,6 +74,8 @@ footer {
 	padding: 10px;
 	border-radius: 5px;
 	font-family: 'Poppins', sans-serif;
+	  cursor: url(https://cdn.custom-cursor.com/db/pointer/32/Blue_pointer.png) , pointer!important;
+
 }
 
 #review-btn1 {
@@ -82,6 +85,8 @@ footer {
 	padding: 10px;
 	border-radius: 5px;
 	font-family: 'Poppins', sans-serif;
+   cursor: url(https://cdn.custom-cursor.com/db/pointer/32/Blue_pointer.png) , pointer!important;
+
 }
 
 #review-btn2 {
@@ -91,6 +96,8 @@ footer {
 	padding: 10px;
 	border-radius: 5px;
 	font-family: 'Poppins', sans-serif;
+	  cursor: url(https://cdn.custom-cursor.com/db/pointer/32/Blue_pointer.png) , pointer!important;
+
 }
 
 #review-btn:hover {
