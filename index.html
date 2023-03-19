@@ -7,7 +7,15 @@
 	<script>
 	function go() {
 	var tag = document.createElement("p"); // <p></p>
-	var text = document.createTextNode("Thank You!");
+	var text = document.createTextNode("Thank you!");
+	tag. appendChild(text); // <p>TEST TEXT</p>
+	var element = document.getElementsByTagName("footer")[0];
+	element. appendChild(tag); // <body> <p>TEST TEXT</p> </body>
+	setTimeout(function(){ element.removeChild(tag) }, 3000);
+}
+		function gobad() {
+	var tag = document.createElement("p"); // <p></p>
+	var text = document.createTextNode("Thank you! I will surely improve it!");
 	tag. appendChild(text); // <p>TEST TEXT</p>
 	var element = document.getElementsByTagName("footer")[0];
 	element. appendChild(tag); // <body> <p>TEST TEXT</p> </body>
@@ -18,18 +26,19 @@
 
 <body>
     <header>
-        <h1>About Neil R.</h1>
+        <h1><center>About Neil R.</center></h1>
         <h2>&nbsp;</h2>
     </header>
     <section>
-        <h2>I am a programmer, and a web developer!</h2>
+        <h2><marquee>I am a programmer, and a web developer!</marquee></h2>
         <p></p>
     </section>
-    <article id="interests">
+    <article id="interests" class="one">
         <h2>My Interests</h2>
-        <p>I love web development. I started web development by learning JavaScript when I was only 10. Eventually I strengthened my HTML and CSS knowledge and started making apps with Bootstrap 5. I went on to make apps like a JSON extractor, a notes app using JavaScript local storage, some marvelous CSS animations, a weather app (using React Native, though I will not be making apps for you all with it) and a To-do App (also using React Native) and even a React news app! Thank you!</p>
+        <p>I love web development. At the same time, I sometimes try to learn machine learning too. I adore app development and my hobby is to try out unpopular and unheard of programming languages like RedLang, Fortran, BASIC, Perl, and more!</p>
+	<br>
     </article>
-    <article>
+    <article class = "one">
         <h2>My hobbies</h2>
         <ul>
 
@@ -50,17 +59,29 @@
             </li>
         </ul>
     </article>
-    <article id="contact">
+    <article id="contact" class="one">
         <h2>Contact Me</h2>
         <p><span class="bold">Email</span> - rehanineil1409@gmail.com</h3>
-        <p><span class="bold">Phone Number (India)</span> - 89208-07783</h3>
     </article>
+	<article class="two">
+	  <h2>More About Me!</h2>
+        <p>I love web development. I started web development by learning JavaScript when I was only 10. Eventually I strengthened my HTML and CSS knowledge and started making apps with Bootstrap 5. I went on to make apps like a JSON extractor, a notes app using JavaScript local storage, some marvelous CSS animations, a weather app (using React Native) and a To-do App (also using React Native) and even a React news app! Thank you!</p>
+</section>
+
+<br>
+<br>
+<br>
+
 	<footer>
 		<h2>Reviews</h2>
 		<button id="review-btn" onclick="go()">Go Ahead and Give "AMAZING!"</button>
-		<button id="review-btn1" onclick="go()">Go Ahead and Give "SATISFYING"</button>
-		<button id="review-btn2" onclick="go()">Go Ahead and Give "WORST"</button>
+		<button id="review-btn1" onclick="gobad()">Go Ahead and Give "SATISFYING"</button>
+		<button id="review-btn2" onclick="gobad()">Go Ahead and Give "NOT A GOOD SITE"</button>
 	</footer>
+<br>
+<br>
+<br>
+<br>
 </body>
 
 </html>
